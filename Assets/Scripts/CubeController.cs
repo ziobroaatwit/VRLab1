@@ -17,7 +17,7 @@ public class CubeController : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             // Add to score when the player hits a cube
-            GameController.score++;
+            scoreManager.updateScore(1);
             // Destroy the cube
             Destroy(gameObject);
         }
