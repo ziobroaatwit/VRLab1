@@ -1,1 +1,1 @@
-C:\Users\ziobroa\Documents\GitHub\Lab_1
+/home/aleksander/Documents/GitHub/Lab_1
