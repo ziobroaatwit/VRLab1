@@ -2,12 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CubeController : MonoBehaviour
+public class CubeController : OVRGrabbable
 {
     private GameController scoreManager;
     // Start is called before the first frame update
-    void Start()
+    protected override void Start()
     {
+        base.Start();
         scoreManager = GameObject.Find("GameController").GetComponent<GameController>();
 
     }
@@ -27,5 +28,10 @@ public class CubeController : MonoBehaviour
     void Update()
     {
         
+    }
+    public override void GrabBegin(OVRGrabber hand, Collider grabPoint)
+    {
+        base.GrabBegin(hand, grabPoint);
+        scoreManager.updateScore(1);
     }
 }
